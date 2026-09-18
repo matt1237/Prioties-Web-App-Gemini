@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom soft scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(82, 183, 136, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(82, 183, 136, 0.45);
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 3s infinite ease-in-out;
+}
+
+/* Bubble wobble and shimmer animations */
+@keyframes bubble-wobble {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.05, 0.95) rotate(-2deg);
+  }
+  66% {
+    transform: scale(0.96, 1.04) rotate(2deg);
+  }
+}
+
+.animate-bubble-wobble {
+  animation: bubble-wobble 4s ease-in-out infinite;
+}
+
+@keyframes bubble-pop-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+.animate-bubble-pop-ring {
+  animation: bubble-pop-ring 0.32s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+@keyframes pop-text-float {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6) rotate(-4deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -80%) scale(1.15) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -130%) scale(0.95) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.animate-pop-text-float {
+  animation: pop-text-float 0.5s ease-out forwards;
+}
+
+@keyframes particle-burst {
+  0% {
+    transform: translate(0, 0) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 20px), var(--ty, 20px)) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.animate-particle-burst {
+  animation: particle-burst 0.38s cubic-bezier(0.15, 0.9, 0.3, 1) forwards;
+}

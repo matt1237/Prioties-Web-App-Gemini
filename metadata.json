@@ -1,0 +1,7 @@
+{
+  "name": "Priorities",
+  "description": "A mindful daily planner and focus app with daily scheduling, priorities, dedications, keywords, routines, flow timer, and interactive walkthrough.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d6a4f"/>
+      <stop offset="100%" stop-color="#1b4332"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Rounded Square App Tile -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+  
+  <!-- Calendar / Card Shape -->
+  <g filter="url(#dropShadow)">
+    <rect x="96" y="116" width="320" height="300" rx="36" fill="#faf8f3"/>
+    
+    <!-- Top Header Ribbon -->
+    <path d="M 96 152 C 96 132.118 112.118 116 132 116 L 380 116 C 399.882 116 416 132.118 416 152 L 416 186 L 96 186 Z" fill="#84a4cb"/>
+    
+    <!-- Spiral Ring Bindings on Top -->
+    <rect x="156" y="90" width="28" height="52" rx="14" fill="#faf8f3" stroke="#2d6a4f" stroke-width="4"/>
+    <rect x="328" y="90" width="28" height="52" rx="14" fill="#faf8f3" stroke="#2d6a4f" stroke-width="4"/>
+    
+    <!-- 3 Priority Circles -->
+    <!-- High (Red) -->
+    <circle cx="160" cy="250" r="24" fill="#ef4444"/>
+    <!-- Medium (Yellow) -->
+    <circle cx="256" cy="250" r="24" fill="#eab308"/>
+    <!-- Low (Green) -->
+    <circle cx="352" cy="250" r="24" fill="#22c55e"/>
+    
+    <!-- Task Checkmark Bar -->
+    <rect x="136" y="320" width="240" height="24" rx="12" fill="#84a4cb" opacity="0.85"/>
+    <rect x="136" y="360" width="160" height="18" rx="9" fill="#84a4cb" opacity="0.45"/>
+  </g>
+</svg>
